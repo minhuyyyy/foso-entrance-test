@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --font-sans: var(--font-raleway); /* ✅ Update this */
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-raleway); /* ✅ Ensure Tailwind uses the variable */
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #ffffffa6;
+        --foreground: #25272a;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif; /* ✅ Use the variable */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+summary {
+    list-style: none; /* Remove default arrow */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.text {
+    line-height: 1; /* Ensures no extra spacing around the text */
+}
+
+.arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: solid #25272a;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Rotate arrow when dropdown is open */
+details[open] .arrow {
+    transform: rotate(225deg);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    list-style: none;
+    min-width: 150px;
+    display: none;
+}
+
+details[open] .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* .dropdown-menu li:hover {
+    background: #f0f0f0;
+} */
+
+.country-select {
+    border: 1px solid rgba(9, 9, 11, 0.1); /* Regular border */
+    border-radius: 40px; /* Ensures rounded corners */
+    background: linear-gradient(
+        360deg,
+        rgba(9, 9, 11, 0.05) 0%,
+        rgba(9, 9, 11, 0.1) 100%
+    ); /* Keep background white */
+}
+
+.cta {
+    background: linear-gradient(0deg, #1ad598, #1ad598),
+        radial-gradient(
+            100% 100% at 50% 0%,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    border: 1px solid
+        radial-gradient(
+            50% 93.75% at 50% 6.25%,
+            #a3eed6 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+}
+
+.foso {
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: baseline;
+    text-transform: capitalize;
+
+    background: linear-gradient(
+            to right,
+            #53b086 0%,
+            rgba(83, 176, 134, 0.99) 27.5%
+        ),
+        radial-gradient(
+            circle at 46.95% 25.05%,
+            rgba(84, 171, 177, 0) 0%,
+            rgba(84, 171, 177, 0.41) 34.38%,
+            rgba(133, 238, 179, 0.71) 51.52%,
+            rgba(84, 171, 177, 0) 100%
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.typo {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: baseline;
+    text-transform: capitalize;
+}
