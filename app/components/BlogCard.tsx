@@ -54,7 +54,7 @@ function BlogCard({
                 </div>
                 <div className='flex flex-row items-baseline gap-4 w-[200px] h-12 mt-4'>
                     <Link
-                        href={'/'}
+                        href={'/blog/details/1'}
                         className='font-raleway font-semibold text-lg leading-[150%] tracking-normal align-middle text-[#667F93]'
                     >
                         Khám phá thêm
