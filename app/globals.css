@@ -24,19 +24,12 @@ body {
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans), Arial, Helvetica, sans-serif; /* ✅ Use the variable */
+    overflow: auto;
 }
 .dropdown {
     position: relative;
     display: inline-block;
     font-family: Arial, sans-serif;
-}
-
-summary {
-    list-style: none; /* Remove default arrow */
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 8px 12px;
 }
 
 .text {
@@ -71,10 +64,6 @@ details[open] .arrow {
     list-style: none;
     min-width: 150px;
     display: none;
-}
-
-details[open] .dropdown-menu {
-    display: block;
 }
 
 .dropdown-menu li {
@@ -153,4 +142,122 @@ details[open] .dropdown-menu {
     text-align: center;
     vertical-align: baseline;
     text-transform: capitalize;
+}
+
+.bold {
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 200%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.bold-24 {
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 200%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.join-community {
+    background-image: url('/assets/join-community.png');
+    background-size: cover; /* Ensures the image covers the element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+.bold-white {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+}
+
+.bold-white-14 {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.group-img {
+    width: 472.09320068359375;
+    height: 399.3992614746094;
+    top: 25px;
+    left: 544px;
+}
+
+.search-box {
+    box-shadow: 0px 12px 24px -4px #919eab29;
+}
+
+.category {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #33404a;
+}
+
+.category-quantity {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #667f93;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+summary::after {
+    content: '';
+    width: 18px;
+    height: 10px;
+    background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg')
+        no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+    /* display: ; */
+}
+
+details[open] > summary::after {
+    transform: rotate(180deg);
+}
+details {
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    cursor: pointer;
+    scroll-margin-top: 300px;
+}
+
+.blog-content::after {
+    content: '';
+    width: 18px;
+    height: 10px;
+    background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg')
+        no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+    filter: invert(39%) sepia(82%) saturate(694%) hue-rotate(120deg)
+        brightness(95%) contrast(94%);
 }

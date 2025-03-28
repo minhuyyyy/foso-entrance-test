@@ -9,9 +9,7 @@ function Details({ current, summary }: { current?: boolean; summary: string }) {
                 current && 'font-bold',
             )}
         >
-            <summary className='flex items-center gap-8 '>
-                {summary} <span className='arrow'></span>
-            </summary>
+            <summary className='flex items-center gap-8 '>{summary}</summary>
         </details>
     );
 }

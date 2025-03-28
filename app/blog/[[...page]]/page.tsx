@@ -1,6 +1,6 @@
+import Blogs from '@/components/Blogs';
+import BreadCrumb from '@/components/BreadCrumb';
 import Image from 'next/image';
-import BreadCrumb from './components/BreadCrumb';
-import Blogs from './components/Blogs';
 
 export default function Home() {
     return (
